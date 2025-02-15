@@ -1,0 +1,80 @@
+[
+    {   "category": "Frontend",
+        "stack": [
+            {
+                "name": "HTML",
+                "description": "HTML (Hypertext Markup Language) is the standard markup language used to create web pages and web applications. It provides a structure for content on the World Wide Web, using a system of elements and attributes to define the layout and content of a document. HTML elements are represented by tags, which browsers interpret to render the visual and auditory elements of a web page. The language has evolved through several versions, with HTML5 being the current standard, introducing semantic elements, improved multimedia support, and enhanced form controls. HTML works in conjunction with CSS for styling and JavaScript for interactivity, forming the foundation of modern web development.",
+                "video": ""
+            },
+            {
+                "name": "CSS",
+                "description": "CSS (Cascading Style Sheets) is a styling language used to describe the presentation of a document written in HTML or XML. It defines how elements should be displayed on screen, on paper, or in other media. CSS separates the design from the content, allowing for greater flexibility and control over the layout, colors, and fonts of web pages. It uses a system of selectors to target HTML elements and apply styles to them. CSS supports responsive design through media queries, enabling the creation of layouts that adapt to different screen sizes and devices. The cascade, inheritance, and specificity are key concepts in CSS that determine how styles are applied when multiple rules target the same element. Modern CSS includes features like Flexbox and Grid for advanced layout control, animations, and transitions for creating dynamic user interfaces.",
+                "video": ""
+            }
+        ]
+
+    },
+    {
+        "category": "Backend",
+        "stack": [
+            {
+                "name": "Pick a Language",
+                "description": "Even if you’re a beginner, the first thing you’ll learn is that web development is primarily divided into two aspects: Frontend Development and Backend Development, each with its unique tools and technologies. For Frontend Development, foundational technologies include HTML, CSS, and JavaScript. Similarly, Backend Development revolves around server-side programming languages like Python, Java, or Node.js, complemented by databases, frameworks, and web servers that enable website functionality.",
+                "children": [
+                    {
+                        "name": "JavaScript",
+                        "description": "JavaScript is a versatile, high-level programming language primarily used for adding interactivity and dynamic features to websites. It runs in the browser, allowing for client-side scripting that can manipulate HTML and CSS, respond to user events, and interact with web APIs. JavaScript is also used on the server side with environments like Node.js, enabling full-stack development. It supports event-driven, functional, and imperative programming styles, and has a rich ecosystem of libraries and frameworks (like React, Angular, and Vue) that enhance its capabilities and streamline development.",
+                        "video": ""
+                    },
+                    {
+                        "name": "Go",
+                        "description": "Go, also known as Golang, is a statically typed, compiled programming language designed by Google. It combines the efficiency of compiled languages with the ease of use of dynamically typed interpreted languages. Go features built-in concurrency support through goroutines and channels, making it well-suited for networked and multicore systems. It has a simple and clean syntax, fast compilation times, and efficient garbage collection. Go’s standard library is comprehensive, reducing the need for external dependencies. The language emphasizes simplicity and readability, with features like implicit interfaces and a lack of inheritance. Go is particularly popular for building microservices, web servers, and distributed systems. Its performance, simplicity, and robust tooling make it a favored choice for cloud-native development, DevOps tools, and large-scale backend systems.",
+                        "video": ""
+                    },
+                    {
+                        "name": "Python",
+                        "description": "Python is a high-level, interpreted programming language known for its readability, simplicity, and versatility. Its design emphasizes code readability and a clear, straightforward syntax, making it accessible for both beginners and experienced developers. Python supports multiple programming paradigms, including procedural, object-oriented, and functional programming. It has a rich ecosystem of libraries and frameworks, such as Django and Flask for web development, Pandas and NumPy for data analysis, and TensorFlow and PyTorch for machine learning. Python is widely used in web development, data science, automation, and scripting, and it benefits from a strong community and extensive documentation.",
+                        "video": ""
+                    }                    
+                ]
+            },
+            {
+                "name": "Version Control Systems",
+                "description": "Version Control Systems (VCS) are tools that manage and track changes to code or documents over time, allowing multiple users to collaborate on a project efficiently. They record every change made to files, enabling developers to revert to previous versions, compare changes, and maintain a history of modifications. VCS can be centralized, where the repository is hosted on a central server (e.g., Subversion), or distributed, where each user has a complete copy of the repository (e.g., Git, Mercurial). Version control facilitates collaboration, enhances code integrity, and supports continuous integration by enabling smooth management of concurrent changes and resolving conflicts.",
+                "children": [
+                    {
+                        "name": "Git",
+                        "description": "Git is a distributed version control system designed to handle projects of any size with speed and efficiency. Created by Linus Torvalds in 2005, it tracks changes in source code during software development, allowing multiple developers to work together on non-linear development. Git maintains a complete history of all changes, enabling easy rollbacks and comparisons between versions. Its distributed nature means each developer has a full copy of the repository, allowing for offline work and backup. Git’s key features include branching and merging capabilities, staging area for commits, and support for collaborative workflows like pull requests. Its speed, flexibility, and robust branching and merging capabilities have made it the most widely used version control system in software development, particularly for open-source projects and team collaborations.",
+                        "video": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "Fullstack",
+        "stack": [
+            {
+                "name": "HTML",
+                "description": "HTML stands for HyperText Markup Language. It is used on the frontend and gives the structure to the webpage which you can style using CSS and make interactive using JavaScript.",
+                "video": ""
+            },
+            {
+                "name": "CSS",
+                "description": "CSS or Cascading Style Sheets is the language used to style the frontend of any website. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.",
+                "video": ""
+            },
+            {
+                "name": "JavaScript",
+                "description": "JavaScript allows you to add interactivity to your pages. Common examples that you may have seen on the websites are sliders, click interactions, popups and so on.",
+                "video": ""
+            },
+            {
+                "name": "npm",
+                "description": "npm is a package manager for the JavaScript programming language maintained by npm, Inc. npm is the default package manager for the JavaScript runtime environment Node.js.",
+                "video": ""
+            }
+
+        ]
+    }
+]
