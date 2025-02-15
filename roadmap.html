@@ -9,10 +9,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="index.js" type="module"></script>
-    <title>Roadmap
-        
-    </title>
+    <script src="roadmap.js" type="module"></script>
+    <title>Roadmap</title>
 </head>
 <body>
     <header class="header">
@@ -52,11 +50,20 @@
         </section>
         <section class="result">
             <div class="container result__container">
-                <ul class="result__list">
+                <div class="categories">
 
-                </ul>
+                </div>
             </div>
         </section>
     </main>
+    <div class="overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-end hidden">
+        <div class="modal bg-white text-gray-900 p-6 rounded-lg shadow-lg w-[500px] max-w-2xl">
+            <div class="modal__container">
+                <div class="modal__content"></div>
+                <div class="modal__video"></div>
+                <button class="modal__close w-full text-white py-2 rounded-lg mt-4">Close</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

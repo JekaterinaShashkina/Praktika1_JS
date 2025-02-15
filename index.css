@@ -109,6 +109,7 @@
     text-align: center;
     margin-bottom: 40px;
     font-size: 34px;
+    font-weight: 700;
 }
 .hero__text {
     max-width: 500px;
@@ -135,10 +136,21 @@
     transition: background-color 0.3s ease-in-out, border-color 0.2s ease-in-out;
     text-align: center;
 }
+.btn:hover {
+  background: linear-gradient(#532746, #f07ed0);
+}
 .result {
   background-color: #e830b4;
 }
-
+.modal {
+  background-color: #d694c6;
+}
+.modal__close {
+  background: linear-gradient(#1c1219, #e830b4);
+}
+.modal__close:hover{
+  background: linear-gradient(#532746, #f07ed0);
+}
 @media (max-width: 1020px) {
 
     .container {
