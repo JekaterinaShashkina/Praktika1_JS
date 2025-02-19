@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="stylesheet" href="index.css">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
-    <script src="index.js" type="module"></script>
-    <title>Document</title>
+    <script src="news.js" type="module" defer></script>
+    <title>News</title>
 </head>
 <body>
     <header class="header">
-        <div class="container header__container">
+        <div class="container__main header__container">
             <img class="header__logo" src="./img/logo.png" alt="">
             <nav class="header__nav">
                 <ul class="navigation__list">
@@ -35,9 +37,55 @@
         </div>
     </header>
     <main>
-        <section class="hero">
+            <section class="hero">
+                <div class="container__main hero__container">
+                    <h1 class="title">Uudised</h1>
+                    <div class="hero__text">
+                        <p>Siin on kõik mis on aktuaalne tänapäevaselt. Please click on the news title to see all text
+                        </p>
+                    </div>
+                    <div class="hero__btns">
+                        <form class="search__form">
+                        <input type="text" placeholder="Search" class="search__input text-black" name="search"/>
+                        <button class="search__submit">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                >
+                                <path
+                                    d="M10.875 18.75C15.2242 18.75 18.75 15.2242 18.75 10.875C18.75 6.52576 15.2242 3 10.875 3C6.52576 3 3 6.52576 3 10.875C3 15.2242 6.52576 18.75 10.875 18.75Z"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M16.4431 16.4438L20.9994 21.0001"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </button>
+                    </form>
+                        <select name="category" class="hero__select">
+                            <option value="category"></option>
+                        </select>   
 
-        </section>
+                    </div>
+                </div>            
+            </section>
+            <section class="news">
+                <div class="container__main news__container">
+                    <h2 class="visually-hidden">News list</h2>
+                    <ul class="news__list">
+                    </ul>
+                </div>
+            </section>
     </main>
 </body>
 </html>

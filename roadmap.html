@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="stylesheet" href="index.css">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="roadmap.js" type="module"></script>
+
+    <script src="roadmap.js" type="module" defer></script>
     <title>Roadmap</title>
 </head>
 <body>
     <header class="header">
-        <div class="container header__container">
+        <div class="container__main header__container">
             <img class="header__logo" src="./img/logo.png" alt="">
             <nav class="header__nav">
                 <ul class="navigation__list">
@@ -37,7 +40,7 @@
     </header>
     <main>
         <section class="hero">
-            <div class="container hero__container">
+            <div class="container__main hero__container">
                 <h1 class="title">Developer Roadmap</h1>
                 <div class="hero__text">
                     <p>Kui te soovite olla arendajana, siis teil on kolm teed.
@@ -50,6 +53,7 @@
         </section>
         <section class="result">
             <div class="container result__container">
+                <h2 class="visually-hidden">Direction selection</h2>
                 <div class="categories">
 
                 </div>
@@ -57,7 +61,7 @@
         </section>
     </main>
     <div class="overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-end hidden">
-        <div class="modal bg-white text-gray-900 p-6 rounded-lg shadow-lg w-[500px] max-w-2xl">
+        <div class="modal text-gray-900 p-6 rounded-lg shadow-lg w-[500px] max-w-2xl">
             <div class="modal__container">
                 <div class="modal__content"></div>
                 <div class="modal__video"></div>

@@ -19,7 +19,7 @@ export const displayCategories = (data, direction) => {
             categoriesContainer.appendChild(categoryCard);
         });
 
-        categoriesContainer.classList.add("flex", "gap-10", "items-start", "flex-wrap", "justify-center");
+        categoriesContainer.classList.add("flex", "gap-7", "items-start", "flex-wrap", "justify-center");
     } else {
         categoriesContainer.innerHTML = "<div class='text-white'>Data not Found</div>";
     }
