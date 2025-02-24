@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
     <script src="trenings.js" type="module" defer></script>
-    <title>Document</title>
+    <title>Treeningukava</title>
 </head>
 <body>
     <header class="header">
@@ -38,8 +38,89 @@
     </header>
     <main>
         <section class="hero">
-            
+            <div class="container__main hero__container">
+            </div>
         </section>
     </main>
+    <div class="overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="modal text-gray-900 p-6 rounded-lg shadow-lg w-[600px] max-w-2xl">
+            <div class="modal__container">
+                <div class="modal__content">
+                    <h2 class="modal__title text-2xl font-bold text-center mb-4">Sisesta treeningu andmed</h2>
+                <form class="modal__form">
+                    <fieldset class="form__fieldset form__fieldset_add-data">
+                    <label class="form__label">
+                        <input
+                        class="form__input"
+                        type="text"
+                        name="trening"
+                        data-id="trening"
+                        placeholder="Sisesta treeningu nimi"
+                        />
+                    </label>
+                    
+                    <label class="form__label">
+                        <input
+                        class="form__input"
+                        type="text"
+                        name="time"
+                        data-id="time"
+                        placeholder="Sisesta treeningu kestus (min)"
+                        />
+                    </label>
+                </fieldset>
+                <fieldset class="form__fieldset form__fieldset_select-data">
+                    <select class="form__select" name="droplist" data-id="droplist">
+                        <option selected disabled>Vali treeningu tüüp</option>
+                        <option value="Strength">Jõutreening</option>
+                        <option value="Cardio">Kardiotreening</option>
+                        <option value="Yoga">Jooga</option>
+                        <option value="Pilates">Pilates</option>
+                        <option value="Dance">Tantsutreening</option>
+                    </select>
+                    <select class="form__select" name="weekly_sessions" data-id="weekly_sessions">
+                        <option selected disabled>Vali treeningute arv nädalas</option>
+                        <option value="1">1 kord nädalas</option>
+                        <option value="2">2 korda nädalas</option>
+                        <option value="3">3 korda nädalas</option>
+                        <option value="4">4 korda nädalas</option>
+                        <option value="5">5 korda nädalas</option>
+                        <option value="6">6 korda nädalas</option>
+                        <option value="7">7 korda nädalas</option>
+                    </select>
+                </fieldset>
+
+                <fieldset class="form__fieldset form__fieldset_radio-text">
+
+                    <input type="radio" id="kerge" name="intensive" value="Kerge" class="form__radio" />
+                    <label for="kerge">Kerge</label>
+                
+                    <input type="radio" id="keskmine" name="intensive" value="Keskmine" class="form__radio" />
+                    <label for="keskmine">Keskmine</label>
+                
+                    <input type="radio" id="korge" name="intensive" value="Kõrge" class="form__radio" />
+                    <label for="korge">Kõrge</label>
+                </fieldset>
+
+                    <label class="modal__label mt-4">
+                        <textarea
+                        class="modal__textarea w-full p-2 rounded-lg"
+                        name="comments"
+                        placeholder="Sisesta oma kommentaarid siia..."
+                        rows="4"
+                        ></textarea>
+                    </label>
+                <div class="btns__modal">
+                    <button type="submit" class="btn__modal w-full text-white py-2 rounded-lg mt-4">Save</button>
+                    <button type="reset" class="btn__modal w-full text-white py-2 rounded-lg mt-4">Reset</button>
+                    <button type="button" class="btn__modal modal__close w-full text-white py-2 rounded-lg mt-4">Close</button>
+                </div>
+                    </form>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>

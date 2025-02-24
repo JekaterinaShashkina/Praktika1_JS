@@ -1,4 +1,5 @@
-import { openModal } from "../modal.js";
+import { onModal } from "../modal.js";
+import { renderModal } from "./render.js";
 
 export const createButton = (text, direction) => {
     const btn = document.createElement("button");
@@ -11,6 +12,7 @@ export const createButton = (text, direction) => {
 }
 
 export const createCategoryCard = (categoryData) => {
+    const {category, members} = categoryData
     const categoryCard = document.createElement("div");
     categoryCard.classList.add(
         "bg-gray-800", "hover:bg-gray-700", "text-white",
@@ -20,13 +22,12 @@ export const createCategoryCard = (categoryData) => {
     );
 
     const categoryTitle = document.createElement("h2");
-    categoryTitle.textContent = categoryData.category;
+    categoryTitle.textContent = category;
     categoryTitle.classList.add("category__title", "text-lg", "font-bold", "mb-2", "text-center");
 
-    const topicList = createTopicList(categoryData.members);
+    const topicList = createTopicList(members);
 
-    categoryCard.appendChild(categoryTitle);
-    categoryCard.appendChild(topicList);
+    categoryCard.append(categoryTitle, topicList);
 
     return categoryCard;
 }
@@ -43,9 +44,11 @@ export const createTopicList = (members) => {
             "text-sm", "w-full", "text-center", "flex",
             "items-center", "justify-center"
         );
-        openModal(li, topic.name, topic.description, topic.video)
-        topicList.appendChild(li);
+        // openModal(li, topic.name, topic.description, topic.video)
+        onModal(li, topic, renderModal)
+        topicList.append(li);
     });
 
     return topicList;
 }
+
