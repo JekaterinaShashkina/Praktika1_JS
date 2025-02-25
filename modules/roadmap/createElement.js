@@ -1,4 +1,4 @@
-import { onModal } from "../modal.js";
+import { onModal } from "./modal.js";
 import { renderModal } from "./render.js";
 
 export const createButton = (text, direction) => {

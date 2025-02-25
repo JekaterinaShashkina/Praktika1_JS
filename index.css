@@ -300,6 +300,18 @@ background: linear-gradient(#532746, #f07ed0);
   border: none;
   padding: 10px 14px;
 }
+.btn_del {
+  background: linear-gradient(#690246, #e69bbe);
+}
+.btn_del:hover{
+  background: linear-gradient(#532746, #f07ed0);
+}
+.btn_end {
+  background: linear-gradient(#07120b, #5aa787);
+}
+.btn_end:hover{
+  background: linear-gradient(#07120b, #0ddd87);
+}
 @media (max-width: 1020px) {
 
     .container {

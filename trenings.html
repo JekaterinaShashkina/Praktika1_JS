@@ -41,6 +41,9 @@
             <div class="container__main hero__container">
             </div>
         </section>
+        <section class="training">
+            
+        </section>
     </main>
     <div class="overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
         <div class="modal text-gray-900 p-6 rounded-lg shadow-lg w-[600px] max-w-2xl">
@@ -53,7 +56,7 @@
                         <input
                         class="form__input"
                         type="text"
-                        name="trening"
+                        name="Training_name"
                         data-id="trening"
                         placeholder="Sisesta treeningu nimi"
                         />
@@ -63,14 +66,14 @@
                         <input
                         class="form__input"
                         type="text"
-                        name="time"
+                        name="Training_time"
                         data-id="time"
                         placeholder="Sisesta treeningu kestus (min)"
                         />
                     </label>
                 </fieldset>
                 <fieldset class="form__fieldset form__fieldset_select-data">
-                    <select class="form__select" name="droplist" data-id="droplist">
+                    <select class="form__select" name="Training_type" data-id="droplist">
                         <option selected disabled>Vali treeningu tüüp</option>
                         <option value="Strength">Jõutreening</option>
                         <option value="Cardio">Kardiotreening</option>
@@ -78,7 +81,7 @@
                         <option value="Pilates">Pilates</option>
                         <option value="Dance">Tantsutreening</option>
                     </select>
-                    <select class="form__select" name="weekly_sessions" data-id="weekly_sessions">
+                    <select class="form__select" name="Weekly_sessions" data-id="weekly_sessions">
                         <option selected disabled>Vali treeningute arv nädalas</option>
                         <option value="1">1 kord nädalas</option>
                         <option value="2">2 korda nädalas</option>
@@ -92,20 +95,20 @@
 
                 <fieldset class="form__fieldset form__fieldset_radio-text">
 
-                    <input type="radio" id="kerge" name="intensive" value="Kerge" class="form__radio" />
+                    <input type="radio" id="kerge" name="Intensive" value="Kerge" class="form__radio" />
                     <label for="kerge">Kerge</label>
                 
-                    <input type="radio" id="keskmine" name="intensive" value="Keskmine" class="form__radio" />
+                    <input type="radio" id="keskmine" name="Intensive" value="Keskmine" class="form__radio" />
                     <label for="keskmine">Keskmine</label>
                 
-                    <input type="radio" id="korge" name="intensive" value="Kõrge" class="form__radio" />
+                    <input type="radio" id="korge" name="Intensive" value="Kõrge" class="form__radio" />
                     <label for="korge">Kõrge</label>
                 </fieldset>
 
                     <label class="modal__label mt-4">
                         <textarea
                         class="modal__textarea w-full p-2 rounded-lg"
-                        name="comments"
+                        name="Comments"
                         placeholder="Sisesta oma kommentaarid siia..."
                         rows="4"
                         ></textarea>
