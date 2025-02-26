@@ -153,7 +153,7 @@ export const createHeroElements = () => {
     const tableSection = document.querySelector(".training");
 
     const tableWrapper = document.createElement('div');
-    tableWrapper.classList.add('overflow-x-auto', 'rounded-lg', 'shadow-lg', 'bg-gray-900', 'p-4');
+    tableWrapper.classList.add('overflow-x-auto', "mb-10", 'shadow-lg', 'bg-gray-900', 'p-4');
     
     const table = document.createElement('table');
     table.classList.add('w-full', 'border-collapse', 'border', 'border-gray-700');
@@ -169,10 +169,15 @@ export const createHeroElements = () => {
             <th>Sagedus näd.</th>
             <th>Intensiivsus</th>
             <th>Kommentaar</th>            
-  
+            <th>
+              <button class="btn-del-all text-white font-bold py-1 px-3 rounded">
+                Delete All
+              </button>
+            </th>
           </tr>
           `,
     );
+
     tableWrapper.table = table;
     const tbody = document.createElement('tbody');
     tbody.classList.add('bg-gray-700', 'text-gray-300');
@@ -225,14 +230,14 @@ export const createHeroElements = () => {
     btnDel.type = 'button';
     btnDel.textContent = 'Delete';
 
-    const btnEnd = document.createElement('button');
-    btnEnd.classList.add('btn_end', 'hover:bg-green-700', 'text-white', 'px-4', 'py-1', 'rounded-lg', 'transition');
-    btnEnd.style.marginRight = 20 + 'px';
-    btnEnd.type = 'button';
-    btnEnd.textContent = 'Complete';
+    const btnComplete = document.createElement('button');
+    btnComplete.classList.add('btn_complete', 'hover:bg-green-700', 'text-white', 'px-4', 'py-1', 'rounded-lg', 'transition');
+    btnComplete.style.marginRight = 20 + 'px';
+    btnComplete.type = 'button';
+    btnComplete.textContent = 'Complete';
   
 
-    tdBtns.append(btnDel, btnEnd);
+    tdBtns.append(btnDel, btnComplete);
   
     tr.append(tdId, tdName, tdTime, tdType, tdSessions, tdIntensive, tdComments, tdBtns);
     return tr;

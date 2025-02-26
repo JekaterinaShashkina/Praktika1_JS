@@ -8,10 +8,31 @@ export const setStorage = (key, obj) => {
   
   export const removeStorage = (id) => {
     let trainings = getStorage('training');
-    trainings.forEach((training) => {
-      if (training.id === id) {
-        trainings.splice(training, 1);
-      }
-    });
+    const index = trainings.findIndex((training) => training.id === id);
+
+    if (index !== -1) {
+        trainings.splice(index, 1); 
+    }
+
     localStorage.setItem('training', JSON.stringify(trainings));
   };
+
+  export const getStorageItem = (id) => {
+    const trainings = getStorage("training")
+    const training = trainings.find((item) => item.id === id);
+
+    return training ? training : null;
+};
+
+export const changeStorageItem = (id, key, string) => {
+  let trainings = getStorage(key);
+  console.log(trainings);
+
+  trainings.forEach((t) => {
+    if (t.id === id) {
+      t.statue = string;
+    }
+  });
+  
+  localStorage.setItem(key, JSON.stringify(trainings));
+};

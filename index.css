@@ -306,11 +306,20 @@ background: linear-gradient(#532746, #f07ed0);
 .btn_del:hover{
   background: linear-gradient(#532746, #f07ed0);
 }
-.btn_end {
+.btn_complete {
   background: linear-gradient(#07120b, #5aa787);
 }
-.btn_end:hover{
+.btn_complete:hover{
   background: linear-gradient(#07120b, #0ddd87);
+}
+.btn-del-all {
+  background: linear-gradient(#111206, #f3f7a1);
+}
+.btn-del-all:hover {
+  background: linear-gradient(#111206, #bdc703);
+}
+.training__completed{
+  color: #1cca81;
 }
 @media (max-width: 1020px) {
 
