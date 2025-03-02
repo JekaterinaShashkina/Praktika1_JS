@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/burger.css">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
     <script src="news.js" type="module" defer></script>
+    <script src="./modules/burger.js" defer></script>
     <title>News</title>
 </head>
 <body>
     <header class="header">
         <div class="container__main header__container">
             <img class="header__logo" src="./img/logo.png" alt="">
+            <button class="burger header__burger">
+                <span class="burger__line"></span>
+            </button>
             <nav class="header__nav">
                 <ul class="navigation__list">
                     <li class="navigation__item">
@@ -81,8 +86,8 @@
                     </div>
                 </div>            
             </section>
-            <section class="news">
-                <div class="container__main news__container">
+            <section class="news training overflow-x-auto mb-10 shadow-lg bg-gray-900 p-4">
+                <div class="container news__container">
                     <h2 class="visually-hidden">News list</h2>
                     <ul class="news__list">
                     </ul>

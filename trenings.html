@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/burger.css">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
     <script src="trenings.js" type="module" defer></script>
+    <script src="./modules/burger.js" defer></script>
     <title>Treeningukava</title>
 </head>
 <body>
     <header class="header">
         <div class="container__main header__container">
             <img class="header__logo" src="./img/logo.png" alt="">
+            <button class="burger header__burger">
+                <span class="burger__line"></span>
+            </button>
             <nav class="header__nav">
                 <ul class="navigation__list">
                     <li class="navigation__item">
@@ -31,7 +36,12 @@
                     <li class="navigation__item">
                         <a href="trenings.html" class="navigation__link">Treeningu kava</a>
                     </li>
-
+                    <li>
+                        <label id="switch" class="switch">
+                            <input type="checkbox" id="slider">
+                            <span class="slider round"></span>
+                        </label>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -41,7 +51,30 @@
             <div class="container__main hero__container">
             </div>
         </section>
-        <section class="training">
+
+        <section class="training overflow-x-auto mb-10 shadow-lg bg-gray-900 p-4">
+            <div class="container add__container ">
+                <div class="stats"></div>
+                <div class="filter">
+                    <select class="filter-select hero__select filter-type">
+                        <option value="all">Kõik treeningud</option>
+                        <option value="Strength">Jõutreening</option>
+                        <option value="Cardio">Kardiotreening</option>
+                        <option value="Yoga">Jooga</option>
+                        <option value="Pilates">Pilates</option>
+                        <option value="Dance">Tantsutreening</option>
+                    </select>
+                
+                    <select class="filter-select hero__select filter-intensity">
+                        <option value="all">Kõik intensiivsused</option>
+                        <option value="Kerge">Kerge</option>
+                        <option value="Keskmine">Keskmine</option>
+                        <option value="Kõrge">Kõrge</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+        <section class="trainings__container container">
             
         </section>
     </main>

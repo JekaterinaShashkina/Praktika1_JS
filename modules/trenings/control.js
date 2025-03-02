@@ -1,11 +1,17 @@
 import { setStorage, removeStorage, getStorage, getStorageItem, changeStorageItem } from "./storage.js"
 import { renderRow } from "./render.js"
+import { displayStatistics } from "./createElement.js"
 
+export const modalOpen = (btn, overlay) => {
+  btn.addEventListener("click", () => {
+    overlay.classList.remove("hidden")        
+})
+}
 export const formControl = (modalForm, table) => {
     modalForm.addEventListener("submit", (e) => {
         e.preventDefault()
         const formData = new FormData(e.target)
-        formData.append('statue', 'Processes');
+        formData.append('statue', 'In Progress');
         formData.append('id', Math.random().toString().substring(2, 10));
         const newTrening = Object.fromEntries(formData)
         setStorage("training", newTrening)
@@ -15,6 +21,7 @@ export const formControl = (modalForm, table) => {
 
         modalForm.reset();
         const arr = getStorage("training")
+        displayStatistics(arr);
         renderRow(arr, table)
     })
 
@@ -70,6 +77,7 @@ export const deleteTraining = (table) => {
 
           removeStorage(id);
           const arr = getStorage("training")
+          displayStatistics(arr);
           renderRow(arr, table);
         }
       }
@@ -79,14 +87,14 @@ export const deleteTraining = (table) => {
 export const completeTraining = (table) => {
   table.addEventListener('click', (e) => {
     const target = e.target
-    console.log('target: ', target);
+    if (!target.closest(".btn_complete")) return;
+
     const training = target.closest('.training_task')
     const id = training.querySelector('.id').textContent;
 
-    let status  = getStorageItem(id).statue || "Processes";
-    console.log("Текущий статус:", status);
+    let status  = getStorageItem(id).statue || "In Progress";
     if (
-      training && status === 'Processes'
+      training && status === 'In Progress'
     ) {
       status = 'Completed';
       training.classList.remove('text-white')
@@ -94,10 +102,13 @@ export const completeTraining = (table) => {
       target.textContent = 'Completed'
       changeStorageItem(id, 'training', status);
     } else {
-      status = 'Processes';
+      status = 'In Progress';
       training.classList.add('text-white');
       training.classList.remove('table__completed');
+      target.textContent = 'Complete'
       changeStorageItem(id, 'training', status);
+
     }
+    displayStatistics(getStorage("training"));
   })
 }
