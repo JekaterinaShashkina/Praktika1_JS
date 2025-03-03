@@ -27,7 +27,6 @@ export const displayCategories = (data, direction) => {
 
 export const renderModal = (modalContent, data) => {
     const {description, name, video} = data
-    console.log('data: ', data);
     const modalVideo = document.querySelector(".modal__video")
 
     modalContent.innerHTML = `

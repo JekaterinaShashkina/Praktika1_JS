@@ -198,7 +198,7 @@ export const createHeroElements = () => {
 
     const tr = document.createElement('tr');
     if (status === "In Progress") {
-      tr.classList.add('training_task','bg-gray-800', 'text-white', 'border-b', 'border-gray-600', 'hover:bg-gray-700', 'transition');
+      tr.classList.add('training_task','bg-gray-800', 'border-b', 'border-gray-600', 'hover:bg-gray-700', 'transition');
 
     } else {
       tr.classList.add('training_task','bg-gray-800', 'training__completed', 'border-b', 'border-gray-600', 'hover:bg-gray-700', 'transition');
@@ -238,13 +238,11 @@ export const createHeroElements = () => {
 
     const btnDel = document.createElement('button');
     btnDel.classList.add('btn_del','text-white', 'font-bold', 'py-1', 'px-3', 'rounded-lg', 'shadow-md', 'transition');
-    // btnDel.style.marginRight = 20 + 'px';
     btnDel.type = 'button';
     btnDel.textContent = 'Delete';
 
     const btnComplete = document.createElement('button');
     btnComplete.classList.add('btn_complete','font-bold', 'text-white', 'px-3', 'py-1', 'rounded-lg', 'shadow-md', 'transition');
-    // btnComplete.style.marginRight = 20 + 'px';
     btnComplete.type = 'button';
     status === "In Progress" ? btnComplete.textContent = 'Complete': btnComplete.textContent = 'Completed';
   

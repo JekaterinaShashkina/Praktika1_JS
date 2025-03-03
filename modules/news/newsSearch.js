@@ -17,9 +17,15 @@ export const searchNews = (news) => {
 
 const filteredNewsSearch = (news, searchInput) => {
     const searchText = searchInput.value.toLowerCase().trim()
+    if (!searchText) {
+        displayNews(news);
+        return;
+    }
+
     const filteredNews = news.filter(item => {
-        return item.title.toLowerCase().includes(searchText) || item.description.toLowerCase().includes(searchText)
+        return item.title.toLowerCase().includes(searchText) || 
+        item.description.toLowerCase().includes(searchText) ||
+        item.category.toLowerCase().includes(searchText)
     })
-    // newsList.innerHTML = ""
     displayNews(filteredNews)
 }

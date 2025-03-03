@@ -6,9 +6,13 @@ export const filterTrainings = (table) => {
     const intensityFilter = document.querySelector(".filter-intensity")
 
     const applyFilter = () => {
+        let trainings = getStorage("training");
+        if (!trainings || !trainings.length) {
+            renderRow([], table);
+            return;
+        }
         const selectedType = typeFilter.value;
         const selectedIntensity = intensityFilter.value;
-        let trainings = getStorage("training") || [];
 
         const filteredTrainings = trainings.filter((training) => {
             const typeMatch = selectedType === "all" || training.Training_type === selectedType;

@@ -93,18 +93,18 @@ export const completeTraining = (table) => {
     const id = training.querySelector('.id').textContent;
 
     let status  = getStorageItem(id).statue || "In Progress";
+    const isLightTheme = document.documentElement.classList.contains('theme-light');
+    console.log('isLightTheme: ', isLightTheme);
     if (
       training && status === 'In Progress'
     ) {
       status = 'Completed';
-      training.classList.remove('text-white')
       training.classList.add('training__completed')
       target.textContent = 'Completed'
       changeStorageItem(id, 'training', status);
     } else {
       status = 'In Progress';
-      training.classList.add('text-white');
-      training.classList.remove('table__completed');
+      training.classList.remove('training__completed');
       target.textContent = 'Complete'
       changeStorageItem(id, 'training', status);
 
